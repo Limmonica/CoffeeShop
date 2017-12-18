@@ -2,17 +2,17 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--XML strings-->
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">JustJava</string>
+    <string name="app_name">DoarJava</string>
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="hint_name">Name</string>
+    <string name="hint_name">Nume</string>
     <!-- Text display in the field for the title "Toppings" [CHAR LIMIT=20] -->
-    <string name="toppings_title">Toppings</string>
+    <string name="toppings_title">Arome</string>
     <!-- Text display for the checkbox with the topping: Whipped Cream [CHAR LIMIT=20] -->
-    <string name="topping_whipped_cream">Whipped Cream</string>
+    <string name="topping_whipped_cream">Frișcă</string>
     <!-- Text display for the checkbox with the topping: Chocolate [CHAR LIMIT=5] -->
-    <string name="topping_chocolate">Chocolate</string>
+    <string name="topping_chocolate">Ciocolată</string>
     <!-- Text display in the field for the title "Quantity" [CHAR LIMIT=20] -->
-    <string name="quantity_title">Quantity</string>
+    <string name="quantity_title">Cantitate</string>
     <!-- Text display for the decrementing button [CHAR LIMIT=3] -->
     <string name="minus_button">-</string>
     <!-- Text display for the incrementing button [CHAR LIMIT=3] -->
@@ -20,30 +20,30 @@
     <!-- Text display for the quantity number to start from [CHAR LIMIT=5] -->
     <string name="quantity_start">1</string>
     <!-- Text display for the button "Order" [CHAR LIMIT=20] -->
-    <string name="order_button">Order</string>
+    <string name="order_button">Comandă</string>
     <!-- Java strings -->
     <!-- Name for the order summary. It will be shown in the format of "Name: Amy" where Amy is the
       user's name. [CHAR LIMIT=NONE] -->
-    <string name="user_name">Name: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="user_name">Nume: <xliff:g example="Amy" id="name">%s</xliff:g></string>
     <!-- Whipped cream topping for the order summary. It will be shown in the format of
       "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT=NONE] -->
-    <string name="top_whipped_cream">Add Whipped Cream? <xliff:g example="true" id="addWhippedCream">%b</xliff:g></string>
+    <string name="top_whipped_cream">Adaugă Frișcă? <xliff:g example="true" id="addWhippedCream">%b</xliff:g></string>
     <!-- Chocolate topping for the order summary. It will be shown in the format of
     "Add chocolate? true" or "Add chocolate? false". [CHAR LIMIT=NONE] -->
-    <string name="top_chocolate">Add Chocolate? <xliff:g example="true" id="addChocolate">%b</xliff:g></string>
+    <string name="top_chocolate">Adaugă Ciocolată? <xliff:g example="true" id="addChocolate">%b</xliff:g></string>
     <!-- Quantity of coffee cups for the order summary. It will be shown in the format of
       "Quantity: 1", where 1 is the number of cups ordered. [CHAR LIMIT=NONE] -->
-    <string name="quantity">Quantity: <xliff:g example="2" id="quantity">%d</xliff:g></string>
+    <string name="quantity">Cantitate: <xliff:g example="2" id="quantity">%d</xliff:g></string>
     <!-- Total price for the order summary. It will be shown in the format of
       "Total: $10" where $10 is the price. [CHAR LIMIT=NONE] -->
     <string name="total_charged">Total: <xliff:g example="$" id="symbol">%s</xliff:g><xliff:g example="$10" id="price">%d</xliff:g></string>
     <!-- Text display for the "Thank you" label in the Order Summary - email body -->
-    <string name="thank_you">Thank You!</string>
+    <string name="thank_you">Mulțumesc!</string>
     <!-- Subject line for the order summary email. It will be in the format of
       "Just Java order for Amy" where Amy is the user's name. [CHAR LIMIT=NONE] -->
-    <string name="email_subject">Just Java order for <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="email_subject">Comandă Doar Java pentru <xliff:g example="Amy" id="name">%s</xliff:g></string>
     <!-- Text display for the Toast error message when decreasing to <1 [CHAR LIMIT=NONE] -->
-    <string name="error_toast_1">You cannot have less than 1 coffee</string>
+    <string name="error_toast_1">Nu poți comanda mai puțin de o cafea</string>
     <!-- Text display for the Toast error message when increasing to >100 [CHAR LIMIT=NONE] -->
-    <string name="error_toast_100">You cannot have more than 100 coffees</string>
+    <string name="error_toast_100">Nu poți comanda mai mult de 100 de cafele</string>
 </resources>
