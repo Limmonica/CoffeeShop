@@ -36,7 +36,7 @@
     <string name="quantity">Cantitate: <xliff:g example="2" id="quantity">%d</xliff:g></string>
     <!-- Total price for the order summary. It will be shown in the format of
       "Total: $10" where $10 is the price. [CHAR LIMIT=NONE] -->
-    <string name="total_charged">Total: <xliff:g example="$" id="symbol">%s</xliff:g><xliff:g example="$10" id="price">%d</xliff:g></string>
+    <string name="total_charged">Total: <xliff:g example="$10" id="price">%s</xliff:g></string>
     <!-- Text display for the "Thank you" label in the Order Summary - email body -->
     <string name="thank_you">Mulțumesc!</string>
     <!-- Subject line for the order summary email. It will be in the format of

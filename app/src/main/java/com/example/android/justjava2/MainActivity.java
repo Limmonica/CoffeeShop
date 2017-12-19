@@ -11,10 +11,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Currency;
-import java.util.Locale;
+import java.text.NumberFormat;
 
-/** This app displays an order form to order coffee. */
+/**
+ * This app displays an order form to order coffee.
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -111,16 +112,11 @@ public class MainActivity extends AppCompatActivity {
      * @return text summary
      */
     private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate, String name) {
-        // Get currency based on your location
-        Locale locale = Locale.getDefault();
-        Currency currency = Currency.getInstance(locale);
-        String symbol = currency.getSymbol();
-        // Create message body with the order summary
         String priceMessage = getString(R.string.user_name, name);
         priceMessage += "\n" + getString(R.string.top_whipped_cream, addWhippedCream);
         priceMessage += "\n" + getString(R.string.top_chocolate, addChocolate);
         priceMessage += "\n" + getString(R.string.quantity, quantity);
-        priceMessage += "\n" + getString(R.string.total_charged, symbol, price);
+        priceMessage += "\n" + getString(R.string.total_charged, NumberFormat.getCurrencyInstance().format(price));
         priceMessage += "\n" + getString(R.string.thank_you);
         return priceMessage;
     }
