@@ -2,17 +2,31 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--XML strings-->
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">DoarJava</string>
+    <string name="app_name">Coffee Shop</string>
+    <!-- Description of the logo picture. [CHAR LIMIT=12] -->
+    <string name="logo_description">Logo Coffee Shop</string>
+    <!-- Description of the background picture. [CHAR LIMIT=12] -->
+    <string name="bg_description">Fundal Coffee Shop</string>
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="hint_name">Nume</string>
-    <!-- Text display in the field for the title "Toppings" [CHAR LIMIT=20] -->
-    <string name="toppings_title">Arome</string>
+    <string name="hint_name">Scrie numele tău</string>
+    <!-- Text display in the field for the title "Add Options (free)" [CHAR LIMIT=20] -->
+    <string name="options_title">Adaugă opțiune:</string>
+    <!-- Text display for the checkbox with the option: Sugar [CHAR LIMIT=20] -->
+    <string name="option_sugar">Zahăr</string>
+    <!-- Text display for the checkbox with the option: Milk [CHAR LIMIT=20] -->
+    <string name="option_milk">Lapte</string>
+    <!-- Text display in the field for the title "Add Toppings" [CHAR LIMIT=20] -->
+    <string name="toppings_title">Adaugă arome:</string>
+    <!-- Text display for the checkbox with the topping: Caramel [CHAR LIMIT=20] -->
+    <string name="topping_caramel">Caramel</string>
+    <!-- Text display for the checkbox with the topping: Cinnamon [CHAR LIMIT=20] -->
+    <string name="topping_cinnamon">Scorțișoară</string>
     <!-- Text display for the checkbox with the topping: Whipped Cream [CHAR LIMIT=20] -->
     <string name="topping_whipped_cream">Frișcă</string>
     <!-- Text display for the checkbox with the topping: Chocolate [CHAR LIMIT=5] -->
     <string name="topping_chocolate">Ciocolată</string>
     <!-- Text display in the field for the title "Quantity" [CHAR LIMIT=20] -->
-    <string name="quantity_title">Cantitate</string>
+    <string name="quantity_title">Selectează cantitatea: </string>
     <!-- Text display for the decrementing button [CHAR LIMIT=3] -->
     <string name="minus_button">-</string>
     <!-- Text display for the incrementing button [CHAR LIMIT=3] -->
@@ -25,6 +39,18 @@
     <!-- Name for the order summary. It will be shown in the format of "Name: Amy" where Amy is the
       user's name. [CHAR LIMIT=NONE] -->
     <string name="user_name">Nume: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <!-- Sugar option for the order summary. It will be shown in the format of
+      "Add sugar? true" or "Add sugar? false". [CHAR LIMIT=NONE] -->
+    <string name="opt_sugar">Adaugă Zahăr? <xliff:g example="true" id="addSugar">%b</xliff:g></string>
+    <!--Milk option for the order summary. It will be shown in the format of
+      "Add milk? true" or "Add milk? false". [CHAR LIMIT=NONE] -->
+    <string name="opt_milk">Adaugă Lapte? <xliff:g example="true" id="addMilk">%b</xliff:g></string>
+    <!-- Caramel topping for the order summary. It will be shown in the format of
+      "Add caramel? true" or "Add caramel? false". [CHAR LIMIT=NONE] -->
+    <string name="top_caramel">Adaugă Caramel? <xliff:g example="true" id="addCaramel">%b</xliff:g></string>
+    <!-- Cinnamon topping for the order summary. It will be shown in the format of
+      "Add cinnamon? true" or "Add cinnamon? false". [CHAR LIMIT=NONE] -->
+    <string name="top_cinnamon">Adaugă Scorțișoară? <xliff:g example="true" id="addCinnamon">%b</xliff:g></string>
     <!-- Whipped cream topping for the order summary. It will be shown in the format of
       "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT=NONE] -->
     <string name="top_whipped_cream">Adaugă Frișcă? <xliff:g example="true" id="addWhippedCream">%b</xliff:g></string>
@@ -41,7 +67,7 @@
     <string name="thank_you">Mulțumesc!</string>
     <!-- Subject line for the order summary email. It will be in the format of
       "Just Java order for Amy" where Amy is the user's name. [CHAR LIMIT=NONE] -->
-    <string name="email_subject">Comandă Doar Java pentru <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="email_subject">Comandă cafea pentru <xliff:g example="Amy" id="name">%s</xliff:g></string>
     <!-- Text display for the Toast error message when decreasing to <1 [CHAR LIMIT=NONE] -->
     <string name="error_toast_1">Nu poți comanda mai puțin de o cafea</string>
     <!-- Text display for the Toast error message when increasing to >100 [CHAR LIMIT=NONE] -->

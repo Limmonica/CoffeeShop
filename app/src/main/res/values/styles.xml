@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -6,6 +6,63 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="cards">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/card_elevation</item>
+    </style>
+
+    <style name="layout_cards_vertical">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">@dimen/padding_8</item>
+    </style>
+
+    <style name="layout_content_cards">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/padding_8</item>
+        <item name="android:paddingBottom">@dimen/parent_layout_padding</item>
+    </style>
+
+    <style name="layout_toppings">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="checkbox_list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/toppings_text_size</item>
+    </style>
+
+    <style name="titles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/title_margin</item>
+        <item name="android:layout_marginBottom">@dimen/title_margin</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/title_padding</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button">
+        <item name="android:layout_width">@dimen/button_size</item>
+        <item name="android:layout_height">@dimen/button_size</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>
