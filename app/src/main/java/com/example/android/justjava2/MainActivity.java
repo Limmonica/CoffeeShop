@@ -26,6 +26,22 @@ public class MainActivity extends AppCompatActivity {
     static final String QUANTITY_SELECTED = "quantity";
     // Initialize the coffee quantity
     int quantity = 1;
+    // Tracks if the customer wants or not sugar with their coffee
+    CheckBox wantsSugar;
+    // Tracks if the customer wants or not milk with their coffee
+    CheckBox wantsMilk;
+    // Tracks if the customer wants or not caramel with their coffee
+    CheckBox wantsCaramel;
+    // Tracks if the customer wants or not cinnamon with their coffee
+    CheckBox wantsCinnamon;
+    // Tracks if the customer wants or not whipped cream with their coffee
+    CheckBox wantsWhippedCream;
+    // Tracks if the customer wants or not chocolate with their coffee
+    CheckBox wantsChocolate;
+    // Tracks the name of the customer ordering
+    EditText name;
+    // Tracks the quantity of coffee ordered
+    TextView viewQuantity;
 
     /**
      * This method hides the keyboard when clicking outside the EditText area
@@ -60,6 +76,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Initializes the sugar checkbox view
+        wantsSugar = findViewById(R.id.sugar_checkbox);
+        // Initializes the milk checkbox view
+        wantsMilk = findViewById(R.id.milk_checkbox);
+        // Initializes the caramel checkbox view
+        wantsCaramel = findViewById(R.id.caramel_checkbox);
+        // Initializes the cinnamon checkbox view
+        wantsCinnamon = findViewById(R.id.cinnamon_checkbox);
+        // Initializes the whipped cream checkbox view
+        wantsWhippedCream = findViewById(R.id.whipped_cream_checkbox);
+        // Initializes the chocolate checkbox view
+        wantsChocolate = findViewById(R.id.chocolate_checkbox);
+        // Initializes the name EditText view
+        name = findViewById(R.id.name);
+        // Initializes the quantity text view
+        viewQuantity = findViewById(R.id.quantity_text_view);
     }
 
     // Hide the keyboard when clicking outside the EditText area
@@ -126,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
      * This method displays the given quantity value on the screen.
      */
     private void displayQuantity(int numberOfCoffees) {
-        TextView quantityTextView = findViewById(R.id.quantity_text_view);
+        TextView quantityTextView = viewQuantity;
         quantityTextView.setText(String.valueOf(numberOfCoffees));
     }
 
@@ -183,17 +215,7 @@ public class MainActivity extends AppCompatActivity {
      * @return text summary
      */
     private String createOrderSummary(int price, boolean addSugar, boolean addMilk, boolean addCaramel, boolean addCinnamon, boolean addWhippedCream, boolean addChocolate, String name) {
-        String priceMessage = getString(R.string.user_name, name);
-        priceMessage += "\n" + getString(R.string.opt_sugar, addSugar);
-        priceMessage += "\n" + getString(R.string.opt_milk, addMilk);
-        priceMessage += "\n" + getString(R.string.top_caramel, addCaramel);
-        priceMessage += "\n" + getString(R.string.top_cinnamon, addCinnamon);
-        priceMessage += "\n" + getString(R.string.top_whipped_cream, addWhippedCream);
-        priceMessage += "\n" + getString(R.string.top_chocolate, addChocolate);
-        priceMessage += "\n" + getString(R.string.quantity, quantity);
-        priceMessage += "\n" + getString(R.string.total_charged, NumberFormat.getCurrencyInstance().format(price));
-        priceMessage += "\n" + getString(R.string.thank_you);
-        return priceMessage;
+        return String.format("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", getString(R.string.user_name, name), getString(R.string.opt_sugar, addSugar), getString(R.string.opt_milk, addMilk), getString(R.string.top_caramel, addCaramel), getString(R.string.top_cinnamon, addCinnamon), getString(R.string.top_whipped_cream, addWhippedCream), getString(R.string.top_chocolate, addChocolate), getString(R.string.quantity, quantity), getString(R.string.total_charged, NumberFormat.getCurrencyInstance().format(price)), getString(R.string.thank_you));
     }
 
     /**
@@ -201,25 +223,25 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         // Figure out if the user wants Sugar
-        CheckBox sugarCheckBox = findViewById(R.id.sugar_checkbox);
+        CheckBox sugarCheckBox = wantsSugar;
         boolean hasSugar = sugarCheckBox.isChecked();
         // Figure out if the user wants Milk
-        CheckBox milkCheckBox = findViewById(R.id.milk_checkbox);
+        CheckBox milkCheckBox = wantsMilk;
         boolean hasMilk = milkCheckBox.isChecked();
         // Figure out if the user wants Caramel
-        CheckBox caramelCheckBox = findViewById(R.id.caramel_checkbox);
+        CheckBox caramelCheckBox = wantsCaramel;
         boolean hasCaramel = caramelCheckBox.isChecked();
         // Figure out if the user wants Cinnamon
-        CheckBox cinnamonCheckBox = findViewById(R.id.cinnamon_checkbox);
+        CheckBox cinnamonCheckBox = wantsCinnamon;
         boolean hasCinnamon = cinnamonCheckBox.isChecked();
         // Figure out if the user wants Whipped Cream
-        CheckBox whippedCreamCheckBox = findViewById(R.id.whipped_cream_checkbox);
+        CheckBox whippedCreamCheckBox = wantsWhippedCream;
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
         // Figure out if the user wants Chocolate
-        CheckBox chocolateCheckBox = findViewById(R.id.chocolate_checkbox);
+        CheckBox chocolateCheckBox = wantsChocolate;
         boolean hasChocolate = chocolateCheckBox.isChecked();
         // Find the user's name
-        EditText customerName = findViewById(R.id.name);
+        EditText customerName = name;
         String name = customerName.getText().toString();
         int price = calculatePrice(hasCaramel, hasCinnamon, hasWhippedCream, hasChocolate);
         String priceMessage = createOrderSummary(price, hasSugar, hasMilk, hasCaramel, hasCinnamon, hasWhippedCream, hasChocolate, name);
