@@ -22,7 +22,5 @@ It allows the customer to choose if they want to add to their coffee:
  It calculates the summary of the order and sends it to an email. 
  The app is displayed in 2 languages: English and Romanian. 
 
-<img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-PE.png"  width="250" height="">
-<img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-PR.png"  width="250" height="">
-<img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-LE.png"  width="500" height="">
-<img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-LR.png"  width="500" height="">
+<img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-PE.png"  width="250" height=""> <img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-PR.png"  width="250" height="">
+<img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-LE.png"  width="500" height=""> <img src="https://github.com/Limmonica/CoffeeShop/blob/master/Udacity-CoffeeShop-LR.png"  width="500" height="">
