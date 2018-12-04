@@ -1,4 +1,4 @@
-package com.example.android.justjava2;
+package com.example.android.CoffeeShop;
 
 import android.app.Activity;
 import android.content.Context;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
      * Needs the parent view to be made clickable and focusable
      */
     public static void hideKeyboard(Activity activity) {
-        if (activity != null && activity.getWindow() != null && activity.getWindow().getDecorView() != null) {
+        if (activity != null && activity.getWindow() != null) {
             InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
             if (imm != null) {
                 imm.hideSoftInputFromWindow(activity.getWindow().getDecorView().getWindowToken(), 0);
@@ -98,8 +98,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         View v = getCurrentFocus();
-        if (v != null
-                && (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_MOVE)
+        if ((ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_MOVE)
                 && v instanceof EditText
                 && !v.getClass().getName().startsWith("android.webkit.")) {
             int screenCoordinates[] = new int[2];
