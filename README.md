@@ -1,4 +1,4 @@
-# Udacity Project Optional: User Input
+# User Input
 
 ## CoffeShop
 
